@@ -4,7 +4,7 @@ require 'bundler/setup'
 require 'librato/metrics'
 require 'yaml'
 
-info = `redis-cli INFO`
+info = `/usr/local/bin/redis-cli INFO`
 
 data = {}
 info.split("\n").each do |line|
