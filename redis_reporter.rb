@@ -21,5 +21,6 @@ Librato::Metrics.authenticate params['librato']['user'], params['librato']['toke
 params['metrics'].each do |metric|
   met = {}
   met["redis.#{metric}"] = { value: data[metric], source: params['source'] }
+  puts "Reporting #{metric} as #{data[metric]}"
   Librato::Metrics.submit met
 end
