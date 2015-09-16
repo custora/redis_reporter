@@ -14,7 +14,7 @@ info.split("\n").each do |line|
   end
 end
 
-params = YAML.load(File.open('./reporter.yml', 'r').read)
+params = YAML.load(File.open('./redis_reporter.yml', 'r').read)
 
 Librato::Metrics.authenticate params['librato']['user'], params['librato']['token']
 
