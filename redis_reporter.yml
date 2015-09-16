@@ -1,0 +1,9 @@
+source: host_name
+
+librato:
+  user: user_email
+  token: token
+
+metrics:
+  - used_memory
+  - used_cpu_sys
