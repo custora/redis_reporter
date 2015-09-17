@@ -32,7 +32,7 @@ params['metrics'].each do |metric|
       source = "#{params['source']}.#{db}"
       met = {}
       met["redis.#{metric}"] = { value: value, source: source }
-      puts "Reporting #{metric} as #{data[metric]} for source #{source}"
+      puts "Reporting #{metric} as #{value} for source #{source}"
       Librato::Metrics.submit met
     end
   else
